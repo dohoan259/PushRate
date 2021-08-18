@@ -30,7 +30,6 @@ class RatingDialog (
                 star = rating
             }
         }
-        settingRepo.callShowCount = 1
     }
 
     private val dialog = AlertDialog.Builder(context)
