@@ -8,6 +8,7 @@ class SettingRepo (private val context: Context) {
 
     companion object {
         const val CALL_SHOW_COUNT_KEY = "call_show_count"
+        const val ENABLE_SHOW_KEY = "enable_show"
     }
 
     var callShowCount: Int
@@ -17,4 +18,12 @@ class SettingRepo (private val context: Context) {
     set(value) {
         pref.edit().putInt(CALL_SHOW_COUNT_KEY, value)?.apply()
     }
+
+    var enableShow: Boolean
+        get() {
+            return pref.getBoolean(ENABLE_SHOW_KEY, true)
+        }
+        set(value) {
+            pref.edit().putBoolean(ENABLE_SHOW_KEY, value)?.apply()
+        }
 }

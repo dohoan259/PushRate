@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         val ratingDialog = RatingBuilderDialog(this).setDuration(1).setMinStar(4).build()
 
         findViewById<Button>(R.id.btn_show_dialog).setOnClickListener {
-            ratingDialog.show()
+            ratingDialog.show(false)
         }
     }
 }

@@ -33,8 +33,6 @@ class RatingDialog (
         settingRepo.callShowCount = 1
     }
 
-
-
     private val dialog = AlertDialog.Builder(context)
         .setTitle(R.string.rating_dialog_title)
         .setView(mBinding.root)
@@ -45,7 +43,7 @@ class RatingDialog (
             d.dismiss()
         }
         .setNegativeButton(context.getString(R.string.no_thanks)) { d, _ ->
-            //todo: not show any more
+            settingRepo.enableShow = false
             d.dismiss()
         }
         .setNeutralButton(context.getString(R.string.later)) { d, _ ->
@@ -55,17 +53,19 @@ class RatingDialog (
 
     fun show(shouldCount: Boolean = true) {
         var newCount = settingRepo.callShowCount
-                if (settingRepo.callShowCount >= duration) {
-                    if (condition!!.needCondition()) {
-                        dialog.show()
-                    }
-                    newCount = 1
-
-                } else {
-                    newCount++
+        val enableShow = settingRepo.enableShow
+        if (settingRepo.callShowCount >= duration) {
+            if (condition!!.needCondition()) {
+                if ((shouldCount && enableShow) || (!shouldCount)){
+                    dialog.show()
                 }
-            if (shouldCount) {
-                settingRepo.callShowCount = newCount
             }
+            newCount = 1
+        } else {
+            newCount++
         }
+        if (shouldCount) {
+            settingRepo.callShowCount = newCount
+        }
+    }
 }
