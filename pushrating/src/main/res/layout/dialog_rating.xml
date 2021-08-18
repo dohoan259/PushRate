@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:text="@string/rating_dialog_message"
         android:textSize="15sp"
-        android:textColor="@android:color/darker_gray"/>
+        android:textColor="@color/grey"/>
 
     <com.willy.ratingbar.ScaleRatingBar
         android:id="@+id/ratingBar"

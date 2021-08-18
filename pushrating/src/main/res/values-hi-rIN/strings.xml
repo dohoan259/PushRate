@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="rating_dialog_title">हमें 5 सितारे रेट करें</string>
+    <string name="rating_dialog_message">यदि आप इस ऐप को पसंद करते हैं, तो कृपया 5-स्टार रेटिंग के साथ हमारा समर्थन करें और हमें भविष्य के संस्करणों में बेहतर करने के लिए प्रोत्साहित करें।</string>
+    <string name="later">बाद में</string>
+    <string name="no_thanks">जी नहीं, धन्यवाद</string>
+</resources>

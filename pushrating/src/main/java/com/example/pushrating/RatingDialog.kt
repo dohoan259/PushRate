@@ -16,6 +16,8 @@ class RatingDialog (
 ) {
 
     private val mBinding = DialogRatingBinding.inflate(LayoutInflater.from(context), null, false)
+    private var star = 5f
+    private val settingRepo = SettingRepo(context)
 
     init {
         if (condition == null) {
@@ -28,10 +30,10 @@ class RatingDialog (
                 star = rating
             }
         }
+        settingRepo.callShowCount = 1
     }
 
-    private var star = 5f
-    private val settingRepo = SettingRepo(context)
+
 
     private val dialog = AlertDialog.Builder(context)
         .setTitle(R.string.rating_dialog_title)
@@ -51,16 +53,19 @@ class RatingDialog (
         }
         .create()
 
-    fun show() {
+    fun show(shouldCount: Boolean = true) {
         var newCount = settingRepo.callShowCount
                 if (settingRepo.callShowCount >= duration) {
                     if (condition!!.needCondition()) {
                         dialog.show()
                     }
                     newCount = 1
+
                 } else {
                     newCount++
                 }
+            if (shouldCount) {
                 settingRepo.callShowCount = newCount
+            }
         }
 }
