@@ -1,0 +1,3 @@
+rootProject.name = "PushRate"
+include ':app'
+include ':pushrating'
