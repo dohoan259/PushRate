@@ -8,7 +8,7 @@ import com.example.pushrating.data.SettingRepo
 import com.example.pushrating.databinding.DialogRatingBinding
 import com.example.pushrating.util.openAppInStore
 
-class RatingDialog (
+class RatingDialog(
     private val context: Context,
     private val duration: Int = 1,
     private val minStar: Int = 4,
@@ -32,7 +32,7 @@ class RatingDialog (
         }
     }
 
-    private val dialog = AlertDialog.Builder(context)
+    private val dialog = AlertDialog.Builder(context, R.style.RateDialogStyle)
         .setTitle(R.string.rating_dialog_title)
         .setView(mBinding.root)
         .setPositiveButton(android.R.string.ok) { d, _ ->
@@ -55,7 +55,7 @@ class RatingDialog (
         val enableShow = settingRepo.enableShow
         if (settingRepo.callShowCount >= duration) {
             if (condition!!.needCondition()) {
-                if ((shouldCount && enableShow) || (!shouldCount)){
+                if ((shouldCount && enableShow) || (!shouldCount)) {
                     dialog.show()
                 }
             }

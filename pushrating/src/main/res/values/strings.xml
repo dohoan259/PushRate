@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="rating_dialog_title">Rate Us 5 Stars</string>
-    <string name="rating_dialog_message">If you like this app,please support us with 5-star rating and encourage us to do better in the future versions.</string>
+    <string name="rating_dialog_message">If you like this app,please support us with 5-star rating and encourage us to do better in the future versions 😁.</string>
     <string name="later">Later</string>
     <string name="no_thanks"> No thanks</string>
 </resources>
