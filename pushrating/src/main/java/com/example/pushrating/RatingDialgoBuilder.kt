@@ -2,10 +2,11 @@ package com.example.pushrating
 
 import android.content.Context
 
-class RatingBuilderDialog(private val context: Context) : RatingBuilder{
+class RatingDialgoBuilder(private val context: Context) : RatingBuilder {
     private var duration = 1
     private var condition: RatingBuilder.ShowCondition? = null
     private var minStar: Int = 4
+    private var threshold: Long = 86400
 
     override
     fun setDuration(duration: Int): RatingBuilder {
@@ -25,12 +26,18 @@ class RatingBuilderDialog(private val context: Context) : RatingBuilder{
         return this
     }
 
+    override fun setThreshold(sec: Long): RatingBuilder {
+        this.threshold = sec
+        return this
+    }
+
     override fun build(): RatingDialog {
         return RatingDialog(
             context = context,
             duration = duration,
             minStar = minStar,
-            condition = condition
+            condition = condition,
+            threshold = threshold
         )
     }
 }

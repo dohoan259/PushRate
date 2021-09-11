@@ -8,6 +8,7 @@ interface RatingBuilder {
 
     fun setMinStar(star: Int): RatingBuilder
 
+    fun setThreshold(sec: Long): RatingBuilder
     fun build(): RatingDialog
 
     interface ShowCondition {
