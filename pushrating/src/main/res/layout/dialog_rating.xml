@@ -8,12 +8,14 @@
     android:paddingHorizontal="24dp"
     android:paddingTop="18dp">
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/rating_dialog_message"
+        android:fontFamily="@font/quicksand_regular"
+        android:textStyle="normal"
         android:textSize="15sp"
-        android:textColor="@color/grey"/>
+        android:textColor="#062737"/>
 
     <com.willy.ratingbar.ScaleRatingBar
         android:id="@+id/ratingBar"
@@ -26,7 +28,7 @@
         app:srb_starHeight="30dp"
         app:srb_starPadding="15dp"
         app:srb_stepSize="0.5"
-        app:srb_isIndicator="false"
+        app:srb_isIndicator="true"
         app:srb_clickable="true"
         app:srb_scrollable="true"
         app:srb_clearRatingEnabled="true"
