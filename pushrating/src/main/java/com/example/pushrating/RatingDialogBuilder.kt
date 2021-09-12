@@ -2,11 +2,12 @@ package com.example.pushrating
 
 import android.content.Context
 
-class RatingDialgoBuilder(private val context: Context) : RatingBuilder {
+class RatingDialogBuilder(private val context: Context) : RatingBuilder {
     private var duration = 1
     private var condition: RatingBuilder.ShowCondition? = null
     private var minStar: Int = 4
     private var threshold: Long = 86400
+    private var dontCountThisLaunch: Boolean = false
 
     override
     fun setDuration(duration: Int): RatingBuilder {
@@ -31,13 +32,19 @@ class RatingDialgoBuilder(private val context: Context) : RatingBuilder {
         return this
     }
 
+    override fun setDontCountThisLaunch(isCount: Boolean): RatingBuilder {
+        this.dontCountThisLaunch = isCount
+        return this
+    }
+
     override fun build(): RatingDialog {
         return RatingDialog(
             context = context,
             duration = duration,
             minStar = minStar,
             condition = condition,
-            threshold = threshold
+            threshold = threshold,
+            dontCountThisLaunch = dontCountThisLaunch
         )
     }
 }

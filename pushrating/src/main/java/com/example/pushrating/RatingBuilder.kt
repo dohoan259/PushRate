@@ -9,6 +9,9 @@ interface RatingBuilder {
     fun setMinStar(star: Int): RatingBuilder
 
     fun setThreshold(sec: Long): RatingBuilder
+
+    fun setDontCountThisLaunch(isCount: Boolean): RatingBuilder
+
     fun build(): RatingDialog
 
     interface ShowCondition {

@@ -15,7 +15,8 @@ class RatingDialog(
     private val duration: Int = 1,
     private val minStar: Int = 4,
     private val threshold: Long = 86400,
-    private var condition: ShowCondition?
+    private var condition: ShowCondition?,
+    private var dontCountThisLaunch: Boolean = false,
 
 ) {
 
@@ -46,9 +47,10 @@ class RatingDialog(
         .setCancelable(false)
         .setPositiveButton(android.R.string.ok) { d, _ ->
             if (star >= minStar) {
+                settingRepo.enableShow = false
                 context.openAppInStore()
             }
-            settingRepo.enableShow = false
+
             d.dismiss()
         }
         .setNegativeButton(context.getString(R.string.no_thanks)) { d, _ ->
@@ -56,17 +58,60 @@ class RatingDialog(
             d.dismiss()
         }
         .setNeutralButton(context.getString(R.string.later)) { d, _ ->
+            resetCondition()
             d.dismiss()
         }
         .create()
 
-    fun show(shouldCount: Boolean = true) {
-        Log.d(TAG, "show: ")
+    private fun resetCondition() {
+        resetDuration()
+        resetThreshold()
+    }
 
-        var newCount = settingRepo.callShowCount
-        Log.i(TAG, "count: $newCount")
+    fun showNow() {
+        dialog.show()
+    }
+
+    fun showIfMeetsConditions() {
+        Log.d(TAG, "show: ")
         val enableShow = settingRepo.enableShow
         Log.i(TAG, "enable: $enableShow")
+
+        Log.i(TAG, "need condition: ${condition!!.needCondition()}")
+        Log.i(TAG, "Duration: $duration")
+        if (meetDuration()) {
+            if (condition!!.needCondition() && meetThreshold() && enableShow) {
+                dialog.show()
+            }
+            resetDuration()
+        } else {
+            increaseDuration()
+        }
+    }
+
+    private fun meetDuration(): Boolean {
+        val newCount = settingRepo.callShowCount
+        return newCount >= duration
+    }
+
+    private fun resetDuration() {
+        settingRepo.callShowCount = 1
+    }
+
+    private fun increaseDuration() {
+        var newCount = settingRepo.callShowCount
+        newCount++
+        if (!dontCountThisLaunch) {
+            settingRepo.callShowCount = newCount
+        }
+    }
+
+    private fun resetThreshold() {
+        val currentDate = Calendar.getInstance().timeInMillis / 1000
+        settingRepo.lastTimeMileStone = currentDate
+    }
+
+    private fun meetThreshold(): Boolean {
         val currentDate = Calendar.getInstance().timeInMillis / 1000
 
         val oldThreshold = settingRepo.timeThreshold
@@ -82,22 +127,6 @@ class RatingDialog(
             timeMileStone = currentDate
         }
 
-        val afterThreshold = (currentDate - timeMileStone) > threshold
-        Log.i(TAG, "After threshold: $afterThreshold")
-        Log.i(TAG, "need condition: ${condition!!.needCondition()}")
-        Log.i(TAG, "Duration: $duration")
-        if (newCount >= duration) {
-            if (condition!!.needCondition() && afterThreshold) {
-                if ((shouldCount && enableShow) || (!shouldCount)) {
-                    dialog.show()
-                }
-            }
-            newCount = 1
-        } else {
-            newCount++
-        }
-        if (shouldCount) {
-            settingRepo.callShowCount = newCount
-        }
+        return (currentDate - timeMileStone) > threshold
     }
 }
