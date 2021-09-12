@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="rating_dialog_title">Beri Kami 5 Bintang</string>
-    <string name="rating_dialog_message">Jika Anda menyukai aplikasi ini, dukung kami dengan peringkat bintang 5 dan dorong kami untuk melakukan yang lebih baik di versi mendatang 🥳.</string>
+    <string name="rating_dialog_message">Jika Anda menyukai aplikasi ini, dukung kami dengan peringkat bintang 5 dan dorong kami untuk melakukan yang lebih baik di versi mendatang &#128522;.</string>
     <string name="later">Nanti</string>
     <string name="no_thanks">Tidak, terima kasih</string>
     <string name="enjoying_app">Enjoying app</string>

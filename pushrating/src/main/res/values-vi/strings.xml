@@ -1,6 +1,6 @@
 <resources>
     <string name="rating_dialog_title">Vote 5 sao</string>
-    <string name="rating_dialog_message">Nếu bạn thấy ứng dụng của chúng tôi hữu ích, vui lòng hỗ trợ chúng tôi với 5 sao và điều này cũng là sự khích lệ to lớn để chúng tôi ra phiên bản tiếp theo trong tương lai 🥳.</string>
+    <string name="rating_dialog_message">Nếu bạn thấy ứng dụng của chúng tôi hữu ích, vui lòng hỗ trợ chúng tôi với 5 sao và điều này cũng là sự khích lệ to lớn để chúng tôi ra phiên bản tiếp theo trong tương lai &#128522;.</string>
     <string name="later">Để sau</string>
     <string name="no_thanks">Không</string>
     <string name="enjoying_app">Khám phá ứng dụng</string>
