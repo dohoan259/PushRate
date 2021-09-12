@@ -69,6 +69,7 @@ class RatingDialog(
     }
 
     fun showNow() {
+        increaseDuration()
         dialog.show()
     }
 

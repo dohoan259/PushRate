@@ -1,9 +1,9 @@
 package com.example.pushrate
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import com.example.pushrating.RatingDialgoBuilder
+import androidx.appcompat.app.AppCompatActivity
+import com.example.pushrating.RatingDialogBuilder
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -11,10 +11,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val ratingDialog =
-            RatingDialgoBuilder(this).setDuration(2).setMinStar(4).setThreshold(30).build()
-        ratingDialog.show(true)
+            RatingDialogBuilder(this).setDuration(2).setMinStar(4).setThreshold(30).build()
+        ratingDialog.showNow()
         findViewById<Button>(R.id.btn_show_dialog).setOnClickListener {
-            ratingDialog.show(false)
+            ratingDialog.showIfMeetsConditions()
         }
     }
 }
