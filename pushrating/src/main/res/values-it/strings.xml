@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="rating_dialog_title">Valutaci 5 stelle</string>
+    <string name="rating_dialog_message">Se ti piace questa app, supportaci con una valutazione a 5 stelle e incoraggiaci a fare meglio nelle versioni future &#128522;</string>
+    <string name="later">Più tardi</string>
+    <string name="no_thanks"> No grazie</string>
+    <string name="enjoying_app">App divertente</string>
+</resources>

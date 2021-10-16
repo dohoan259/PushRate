@@ -8,6 +8,7 @@ class RatingDialogBuilder(private val context: Context) : RatingBuilder {
     private var minStar: Int = 4
     private var threshold: Long = 86400
     private var dontCountThisLaunch: Boolean = false
+    private var indicator = true
 
     override
     fun setDuration(duration: Int): RatingBuilder {
@@ -37,6 +38,11 @@ class RatingDialogBuilder(private val context: Context) : RatingBuilder {
         return this
     }
 
+    override fun setIndicator(isIndicator: Boolean): RatingBuilder {
+        this.indicator = isIndicator
+        return this
+    }
+
     override fun build(): RatingDialog {
         return RatingDialog(
             context = context,
@@ -44,7 +50,8 @@ class RatingDialogBuilder(private val context: Context) : RatingBuilder {
             minStar = minStar,
             condition = condition,
             threshold = threshold,
-            dontCountThisLaunch = dontCountThisLaunch
+            dontCountThisLaunch = dontCountThisLaunch,
+            indicator = indicator
         )
     }
 }

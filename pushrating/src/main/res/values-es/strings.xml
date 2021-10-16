@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name = "rating_dialog_title"> Califícanos con 5 estrellas </string>
+    <string name = "rating_dialog_message"> Si te gusta esta aplicación, apóyanos con una calificación de 5 estrellas y anímanos a mejorar en las versiones futuras &#128522; </string>
+    <string name = "later"> Más tarde </string>
+    <string name = "no_thanks"> No, gracias </string>
+    <string name = "enjoying_app"> Disfrutando de la aplicación </string>
+</resources>

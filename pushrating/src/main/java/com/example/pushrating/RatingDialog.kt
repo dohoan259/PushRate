@@ -17,6 +17,7 @@ class RatingDialog(
     private val threshold: Long = 86400,
     private var condition: ShowCondition?,
     private var dontCountThisLaunch: Boolean = false,
+    private var indicator: Boolean = true
 
 ) {
 
@@ -34,11 +35,12 @@ class RatingDialog(
                 override fun needCondition(): Boolean = true
             }
         }
-        mBinding.ratingBar.setOnRatingChangeListener { _, rating, fromUser ->
+        mBinding.ratingBar.setOnRatingBarChangeListener { _, rating, fromUser ->
             if (fromUser) {
                 star = rating
             }
         }
+        mBinding.ratingBar.setIsIndicator(indicator)
     }
 
     private val dialog = AlertDialog.Builder(context, R.style.RateDialogStyle)

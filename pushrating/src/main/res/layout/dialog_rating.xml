@@ -17,22 +17,14 @@
         android:textSize="15sp"
         android:textColor="#062737"/>
 
-    <com.willy.ratingbar.ScaleRatingBar
+    <androidx.appcompat.widget.AppCompatRatingBar
         android:id="@+id/ratingBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srb_numStars="5"
-        app:srb_minimumStars="1"
-        app:srb_rating="5"
-        app:srb_starWidth="30dp"
-        app:srb_starHeight="30dp"
-        app:srb_starPadding="15dp"
-        app:srb_stepSize="0.5"
-        app:srb_isIndicator="true"
-        app:srb_clickable="true"
-        app:srb_scrollable="true"
-        app:srb_clearRatingEnabled="true"
-        app:srb_drawableEmpty="@drawable/ic_star_empty"
-        app:srb_drawableFilled="@drawable/ic_star_filled"
-        android:layout_marginTop="12dp"/>
+        android:layout_width="match_parent"
+        android:numStars="5"
+        android:rating="5"
+        android:stepSize="1"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:progressTint="@color/orange"
+        android:progressBackgroundTint="@color/grey"/>
 </LinearLayout>

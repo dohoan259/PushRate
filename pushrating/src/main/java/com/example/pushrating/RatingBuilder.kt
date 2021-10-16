@@ -12,6 +12,8 @@ interface RatingBuilder {
 
     fun setDontCountThisLaunch(isCount: Boolean): RatingBuilder
 
+    fun setIndicator(isIndicator: Boolean): RatingBuilder
+
     fun build(): RatingDialog
 
     interface ShowCondition {
