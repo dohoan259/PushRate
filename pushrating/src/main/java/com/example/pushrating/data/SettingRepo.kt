@@ -3,7 +3,7 @@ package com.example.pushrating.data
 import android.annotation.SuppressLint
 import android.content.Context
 
-class SettingRepo(private val context: Context) {
+internal class SettingRepo(private val context: Context) {
 
     private val pref =
         context.applicationContext.getSharedPreferences("push_rate_settings", Context.MODE_PRIVATE)
