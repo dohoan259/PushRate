@@ -10,6 +10,8 @@ interface IAPBuilder {
 
     fun setDontCountThisLaunch(isCount: Boolean): IAPBuilder
 
+    fun setPrice(price: String): IAPBuilder
+
     fun build(onConfirmed: () -> Unit): IAPDialog
 
     interface ShowCondition {

@@ -11,12 +11,12 @@ import com.example.pushrating.databinding.DialogIapBinding
 import java.util.*
 
 class IAPDialog(
-    private val context: Context,
+    context: Context,
     private val duration: Int = 1,
     private val threshold: Long = 172800,
     private var condition: IAPBuilder.ShowCondition?,
     private var dontCountThisLaunch: Boolean = false,
-    private val price: String = "5$",
+    price: String = "5$",
     private val onConfirmed: () -> Unit
 ) {
 

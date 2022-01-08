@@ -7,6 +7,7 @@ class IAPDialogBuilder(private val context: Context) : IAPBuilder {
     private var condition: IAPBuilder.ShowCondition? = null
     private var threshold: Long = 172800
     private var dontCountThisLaunch: Boolean = false
+    private var price: String = "5$"
 
     override
     fun setDuration(duration: Int): IAPBuilder {
@@ -30,6 +31,11 @@ class IAPDialogBuilder(private val context: Context) : IAPBuilder {
         return this
     }
 
+    override fun setPrice(price: String): IAPBuilder {
+        this.price = price
+        return this
+    }
+
     override fun build(onConfirmed: () -> Unit): IAPDialog {
         return IAPDialog(
             context = context,
@@ -37,6 +43,7 @@ class IAPDialogBuilder(private val context: Context) : IAPBuilder {
             condition = condition,
             threshold = threshold,
             dontCountThisLaunch = dontCountThisLaunch,
+            price = price,
             onConfirmed = onConfirmed
         )
     }
