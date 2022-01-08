@@ -4,5 +4,12 @@
     <string name="rating_dialog_message">Se você gosta deste aplicativo, apoie-nos com uma classificação de 5 estrelas e incentive-nos a fazer melhor nas versões futuras &#128522;.</string>
     <string name="later">Mais tarde</string>
     <string name="no_thanks">Não, obrigado</string>
-    <string name="enjoying_app">Enjoying app</string>
+    <string name="enjoying_app">Aproveitando o aplicativo</string>
+    <string name="iap_dialog_title">Acessar recurso completo</string>
+    <string name="upgrade_to_vip">Atualize o VIP para obter a melhor experiência</string>
+    <string name="setting_remove_ads">Remover anúncios</string>
+    <string name="save_more_configuration">Salvar mais configurações</string>
+    <string name="add_more_actions">Adicionar mais ações</string>
+    <string name="vip">VIP</string>
+    <string name="five_dollars">Somente %s</string>
 </resources>

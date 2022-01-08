@@ -4,5 +4,12 @@
     <string name="rating_dialog_message">Jika Anda menyukai aplikasi ini, dukung kami dengan peringkat bintang 5 dan dorong kami untuk melakukan yang lebih baik di versi mendatang &#128522;.</string>
     <string name="later">Nanti</string>
     <string name="no_thanks">Tidak, terima kasih</string>
-    <string name="enjoying_app">Enjoying app</string>
+    <string name="enjoying_app">Menikmati aplikasi</string>
+    <string name="iap_dialog_title">Enjoin fitur lengkap</string>
+    <string name="upgrade_to_vip">Tingkatkan VIP untuk mendapatkan pengalaman yang lebih baik</string>
+    <string name="setting_remove_ads">Hapus Iklan</string>
+    <string name="save_more_configuration">Simpan lebih banyak konfigurasi</string>
+    <string name="add_more_actions">Tambahkan lebih banyak tindakan</string>
+    <string name="vip">VIP</string>
+    <string name="five_dollars">Hanya %s</string>
 </resources>

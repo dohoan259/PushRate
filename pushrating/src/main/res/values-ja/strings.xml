@@ -4,5 +4,12 @@
     <string name="rating_dialog_message">このアプリが気に入ったら、5つ星の評価で私たちをサポートし、将来のバージョンでもっとうまくいくように私たちを励ましてください。&#128522;</string>
     <string name="later">後で</string>
     <string name="no_thanks">結構です</string>
-    <string name="enjoying_app">Enjoying app</string>
+    <string name="enjoying_app">楽しむアプリ</string>
+    <string name="iap_dialog_title">全機能に参加</string>
+    <string name="upgrade_to_vip"> VIPをアップグレードしてより良いエクスペリエンスを得る</string>
+    <string name="setting_remove_ads">広告を削除</string>
+    <string name="save_more_configuration">さらに構成を保存</string>
+    <string name="add_more_actions">アクションを追加</string>
+    <string name="vip">VIP</string>
+    <string name="five_dollars">ただ %s</string>
 </resources>

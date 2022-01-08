@@ -4,4 +4,11 @@
     <string name="later">Để sau</string>
     <string name="no_thanks">Không</string>
     <string name="enjoying_app">Khám phá ứng dụng</string>
+    <string name="iap_dialog_title">Tận hưởng đầy đủ tính năng</string>
+    <string name="upgrade_to_vip">Nâng cấp lên VIP để có trải nghiệm tốt hơn</string>
+    <string name="setting_remove_ads">Xóa quảng cáo</string>
+    <string name="save_more_configuration">Lưu nhiều cấu hình hơn</string>
+    <string name="add_more_actions">Thêm nhiều hành động hơn</string>
+    <string name="vip">VIP</string>
+    <string name="five_dollars">Chỉ %s</string>
 </resources>

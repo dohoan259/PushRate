@@ -4,4 +4,7 @@
     <color name="orange">#FFA500</color>
     <color name="tomato">#FF6347</color>
     <color name="yellow">#eed202 </color>
+    <color name="blueDark1">#3F5867</color>
+    <color name="blueDark">#062737</color>
+    <color name="white">#FFFFFFFF</color>
 </resources>

@@ -1,4 +1,4 @@
-package com.example.pushrating
+package com.example.pushrating.presentation.rating
 
 interface RatingBuilder {
 

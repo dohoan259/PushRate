@@ -1,2 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="rating_dialog_title">Notez-nous 5 étoiles</string>
+    <string name="rating_dialog_message">Si vous aimez cette application, veuillez nous soutenir avec une note de 5 étoiles et nous encourager à faire mieux dans les futures versions &#128522;</string>
+    <string name="later">Plus tard</string>
+    <string name="no_thanks"> Non merci</string>
+    <string name="enjoying_app">Apprécier l\'application</string>
+    <string name="iap_dialog_title">Profitez de la fonctionnalité complète</string>
+    <string name="upgrade_to_vip">Mettre à niveau VIP pour obtenir la meilleure expérience</string>
+    <string name="setting_remove_ads">Supprimer les annonces</string>
+    <string name="save_more_configuration">Enregistrer plus de configuration</string>
+    <string name="add_more_actions">Ajouter plus d\'actions</string>
+    <string name="vip">VIP</string>
+    <string name="five_dollars">Juste %s</string>
+</resources>

@@ -5,4 +5,11 @@
     <string name="later">Later</string>
     <string name="no_thanks"> No thanks</string>
     <string name="enjoying_app">Enjoying app</string>
+    <string name="iap_dialog_title">Enjoin full feature</string>
+    <string name="upgrade_to_vip">Upgrade VIP to get the better experience</string>
+    <string name="setting_remove_ads">Remove Ads</string>
+    <string name="save_more_configuration">Save more configuration</string>
+    <string name="add_more_actions">Add more actions</string>
+    <string name="vip">VIP</string>
+    <string name="five_dollars">Just %s</string>
 </resources>

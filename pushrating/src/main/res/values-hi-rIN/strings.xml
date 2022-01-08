@@ -5,4 +5,11 @@
     <string name="later">बाद में</string>
     <string name="no_thanks">जी नहीं, धन्यवाद</string>
     <string name="enjoying_app">Enjoying app</string>
+    <string name="iap_dialog_title">पूरी सुविधा से जुड़ें</string>
+    <string name="upgrade_to_vip">बेहतर अनुभव प्राप्त करने के लिए VIP को अपग्रेड करें</string>
+    <string name="setting_remove_ads">विज्ञापन हटाएं</string>
+    <string name="save_more_configuration">अधिक कॉन्फ़िगरेशन सहेजें</string>
+    <string name="add_more_actions">और कार्रवाइयां जोड़ें</string>
+    <string name="vip">VIP</string>
+    <string name="five_dollars">अभी - अभी %s</string>
 </resources>

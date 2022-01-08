@@ -5,4 +5,11 @@
     <string name="later"> Позже </string>
     <string name="no_thanks"> Нет, спасибо </string>
     <string name="enjoying_app"> Наслаждаемся приложением </string>
+    <string name="iap_dialog_title">Полная функция</string>
+    <string name="upgrade_to_vip">Обновите VIP, чтобы получить больше удовольствия</string>
+    <string name="setting_remove_ads">Удалить рекламу</string>
+    <string name="save_more_configuration">Сохранить дополнительную конфигурацию</string>
+    <string name="add_more_actions">Добавить дополнительные действия</string>
+    <string name="vip">VIP</string>
+    <string name="five_dollars">Только %s</string>
 </resources>

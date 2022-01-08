@@ -1,10 +1,11 @@
-package com.example.pushrating
+package com.example.pushrating.presentation.rating
 
 import android.content.Context
 import android.util.Log
 import android.view.LayoutInflater
 import androidx.appcompat.app.AlertDialog
-import com.example.pushrating.RatingBuilder.ShowCondition
+import com.example.pushrating.R
+import com.example.pushrating.presentation.rating.RatingBuilder.ShowCondition
 import com.example.pushrating.data.SettingRepo
 import com.example.pushrating.databinding.DialogRatingBinding
 import com.example.pushrating.util.openAppInStore
