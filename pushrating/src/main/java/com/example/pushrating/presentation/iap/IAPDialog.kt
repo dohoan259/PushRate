@@ -107,6 +107,7 @@ class IAPDialog(
 
     private fun meetThreshold(): Boolean {
         val currentDate = Calendar.getInstance().timeInMillis / 1000
+        val twoHours = 3600
 
         val oldThreshold = iapRepo.timeThreshold
         if (oldThreshold != threshold) {
@@ -117,8 +118,8 @@ class IAPDialog(
         Log.i(TAG, "Milestone: $timeMileStone")
         if (timeMileStone == -1L) {
             // First time
-            iapRepo.lastTimeMileStone = currentDate
-            timeMileStone = currentDate
+            iapRepo.lastTimeMileStone = currentDate + twoHours
+            timeMileStone = iapRepo.lastTimeMileStone
         }
 
         return (currentDate - timeMileStone) > threshold
