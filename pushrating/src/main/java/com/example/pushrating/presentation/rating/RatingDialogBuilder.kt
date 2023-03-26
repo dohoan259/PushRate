@@ -2,7 +2,13 @@ package com.example.pushrating.presentation.rating
 
 import android.content.Context
 
-class RatingDialogBuilder(private val context: Context) : RatingBuilder {
+class RatingDialogBuilder(
+    private val context: Context,
+    private var onPositiveClicked: (() -> Unit)? = null,
+    private var onNegativeClicked: (() -> Unit)? = null,
+    private var onNeutralClicked: (() -> Unit)? = null,
+    private var onShow: (() -> Unit)? = null
+) : RatingBuilder {
     private var duration = 1
     private var condition: RatingBuilder.ShowCondition? = null
     private var minStar: Int = 4
@@ -51,7 +57,11 @@ class RatingDialogBuilder(private val context: Context) : RatingBuilder {
             condition = condition,
             threshold = threshold,
             dontCountThisLaunch = dontCountThisLaunch,
-            indicator = indicator
+            indicator = indicator,
+            onNegativeClicked = this.onNegativeClicked,
+            onNeutralClicked = this.onNeutralClicked,
+            onPositiveClicked = this.onPositiveClicked,
+            onShow = this.onShow
         )
     }
 }

@@ -18,8 +18,11 @@ class RatingDialog(
     private val threshold: Long = 86400,
     private var condition: ShowCondition?,
     private var dontCountThisLaunch: Boolean = false,
-    private var indicator: Boolean = true
-
+    private var indicator: Boolean = true,
+    private var onPositiveClicked: (() -> Unit)? = null,
+    private var onNegativeClicked: (() -> Unit)? = null,
+    private var onNeutralClicked: (() -> Unit)? = null,
+    private var onShow: (() -> Unit)? = null
 ) {
 
     private val mBinding = DialogRatingBinding.inflate(LayoutInflater.from(context), null, false)
@@ -54,14 +57,17 @@ class RatingDialog(
                 context.openAppInStore()
             }
 
+            onPositiveClicked?.invoke()
             d.dismiss()
         }
         .setNegativeButton(context.getString(R.string.no_thanks)) { d, _ ->
             settingRepo.enableShow = false
+            onNegativeClicked?.invoke()
             d.dismiss()
         }
         .setNeutralButton(context.getString(R.string.later)) { d, _ ->
             resetCondition()
+            onNeutralClicked?.invoke()
             d.dismiss()
         }
         .create()
@@ -74,6 +80,7 @@ class RatingDialog(
     fun showNow() {
         increaseDuration()
         dialog.show()
+        onShow?.invoke()
     }
 
     fun showIfMeetsConditions() {
@@ -86,6 +93,7 @@ class RatingDialog(
         if (meetDuration()) {
             if (condition!!.needCondition() && meetThreshold() && enableShow) {
                 dialog.show()
+                onShow?.invoke()
             }
             resetDuration()
         } else {
